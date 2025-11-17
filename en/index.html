@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welkom | Tab Digital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+        <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Husnock/site/eacab826f55fbb980a22698a1fbbcf9d6073b294/assets/LOGO.png">
+
+
+    <style>
+      :root {
+        --bg-dark: #0f172a;
+        --bg-card: #1e293b;
+        --bg-accent: #f97316;
+        --text-light: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border-color: #334155;
+        --hover-bg: #273549;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        font-family: "Open Sans", -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-light);
+        margin: 0;
+        line-height: 1.5;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .wrap {
+        flex: 1;
+        max-width: 820px;
+        margin: 48px auto;
+        padding: 0 16px;
+        position: relative; 
+      }
+
+      /* Stijl voor de taalwisselaar aangepast voor tekst */
+      .lang-switch {
+        position: absolute;
+        top: 0; 
+        right: 16px; 
+        padding: 10px 0; /* Padding boven/onder is genoeg */
+        line-height: 1;
+      }
+
+      .lang-switch a {
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+        display: inline-block;
+        
+        /* Nieuwe stijlen voor de tekstlink */
+        color: var(--text-muted); /* Gebruik een gedempte kleur */
+        font-weight: 600;
+        font-size: 14px; 
+        padding: 4px 8px; /* Maak het klikgebied groter */
+        border-radius: 6px;
+        border: 1px solid transparent; 
+      }
+      
+      .lang-switch a:hover {
+        opacity: 1;
+        /* Verander de styling bij hover om interactie aan te geven */
+        color: var(--text-light);
+        background: var(--hover-bg);
+        border: 1px solid var(--border-color);
+        transform: none; /* Geen schaling meer nodig */
+      }
+
+      .card {
+        border: 1px solid var(--border-color);
+        border-radius: 18px;
+        padding: 24px;
+        background: var(--bg-card);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      }
+
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        border-radius: 12px;
+        background: none;
+      }
+
+      .logo-container img {
+        max-height: 90px;
+        width: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+
+      .logo-container img:hover { transform: scale(1.05); }
+
+      .muted {
+        color: var(--text-muted);
+        font-size: 14px;
+        text-align: center;
+        margin: 8px 0 16px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 8px;
+      }
+
+      @media (max-width: 640px) {
+        .grid { grid-template-columns: 1fr; }
+        .logo-container img { max-height: 70px; }
+        .lang-switch { right: 0; }
+      }
+
+      .cta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        background: var(--hover-bg);
+        text-decoration: none;
+        color: var(--text-light);
+        transition: all 0.25s ease;
+      }
+
+      .cta:hover {
+        background: #3a3a3a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(249,115,22,0.25);
+      }
+
+      .cta h2 { margin: 0; font-size: 16px; color: #fef3c7; }
+      .cta p { margin: 4px 0 0; color: var(--text-muted); font-size: 13px; }
+
+      .go {
+        margin-left: auto;
+        font-weight: 700;
+        background: rgba(249,115,22,0.15);
+        color: #fdba74;
+        border: 1px solid rgba(253,186,116,0.4);
+        border-radius: 10px;
+        padding: 8px 10px;
+        white-space: nowrap;
+      }
+
+      footer {
+        background: #111;
+        color: #999;
+        text-align: center;
+        padding: 25px 0;
+        font-size: 14px;
+        margin-top: 40px;
+        border-top: 1px solid #1e293b;
+      }
+      footer a { color: var(--bg-accent); text-decoration: none; margin: 0 12px; font-weight: 500;}
+      footer a:hover { text-decoration: underline; }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="lang-switch">
+        <a href="../EN/index.html" title="Switch to English" aria-label="Switch to English">
+          🇬🇧
+        </a>
+      </div>
+      <div class="card">
+        <div class="logo-container" aria-hidden="true">
+          <img src="https://raw.githubusercontent.com/Husnock/site/eacab826f55fbb980a22698a1fbbcf9d6073b294/assets/TabDigital_full_logo.png" alt="Tab Digital logo" />
+        </div>
+
+        <p class="muted">Waar uw werk stroomlijnt door slimme automatisering.</p>
+
+        <div class="grid">
+          <a class="cta" href="about.html" target="_self" rel="noopener noreferrer">
+            <div>
+              <h2>Over Tab Digital</h2>
+              <p>Zie de kracht van naadloze Google-integratie in onze projecten en ontdek hoe wij u kunnen helpen uw werk te vereenvoudigen.</p>
+            </div>
+            <div class="go">Over ons</div>
+          </a>
+
+          <a class="cta" href="contact.html" target="_blank" rel="noopener noreferrer">
+            <div>
+              <h2>Laten we verbinden</h2>
+              <p>Wilt u uw processen optimaliseren met Google Apps Script of Workspace-integratie?</p>
+            </div>
+            <div class="go">Contact</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      </footer>
+    
+    <script>
+      // set current year
+      const yearSpan = document.createElement('span');
+      yearSpan.id = 'year';
+      yearSpan.textContent = new Date().getFullYear();
+
+      const footer = document.querySelector('footer');
+      if (footer) {
+        // Zorg ervoor dat de voettekst in het Nederlands wordt weergegeven
+        footer.innerHTML = `&copy; ${yearSpan.textContent} Tab Digital. Alle rechten voorbehouden.`;
+      }
+    </script>
+  </body>
+</html>
