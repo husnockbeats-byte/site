@@ -4,7 +4,7 @@
     <base target="_top" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact | Tab Digital</title>
+    <title>Over | Tab Digital</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
@@ -100,6 +100,7 @@
         text-align: center;
       }
 
+      /* Note: Styles for form elements, success/error messages are now redundant but kept for full fidelity of original CSS block. */
       p.muted {
         color: var(--text-muted);
         margin-bottom: 18px;
@@ -214,11 +215,7 @@
   <body>
     <div class="wrap">
       <div class="card">
-        <a
-          class="back-link"
-          href="index.html"
-          >← Terug</a
-        >
+        <a class="back-link" href="index.html">← Terug</a>
 
         <div class="logo-container">
           <img
@@ -227,80 +224,440 @@
           />
         </div>
 
-        <h1>Neem contact op</h1>
-        <p class="muted">
-          Heeft u een idee, vraag of project waarbij Google Workspace en/of Apps Script kan helpen?
-          Laat het me weten – ik neem zo snel mogelijk contact met u op.
-        </p>
+        <h1>Over Tab Digital</h1>
 
-        <form id="contactForm">
-          <label for="name">Naam</label>
-          <input type="text" id="name" name="name" placeholder="Uw naam" required />
+        <section
+          style="
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+          "
+        >
+          <h2
+            style="
+              font-size: 18px;
+              color: var(--bg-accent);
+              margin-top: 0;
+              margin-bottom: 10px;
+            "
+          >
+            Over ons
+          </h2>
+          <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.5">
+            Wij helpen bedrijven slimmer, sneller en foutloos te werken door
+            geavanceerde Google Sheets-oplossingen en krachtige automatiseringen
+            te bouwen.
+          </p>
+          <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.5">
+            Waar teams tijd verliezen aan handmatig werk, bouwen wij schaalbare
+            tools die processen versnellen, fouten voorkomen en volledige
+            controle over data geven.
+          </p>
 
-          <label for="email">E-mailadres</label>
-          <input type="email" id="email" name="email" placeholder="u@voorbeeld.nl" required />
+          <h3
+            style="
+              font-size: 15px;
+              color: var(--text-muted);
+              margin-top: 15px;
+              margin-bottom: 5px;
+            "
+          >
+            Wij combineren:
+          </h3>
+          <ul
+            style="
+              list-style-type: none;
+              padding-left: 15px;
+              margin-top: 0;
+              margin-bottom: 15px;
+            "
+          >
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Diepgaande kennis van Google Sheets
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Automatisering via Apps Script
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Ervaring in complexe bedrijfsprocessen
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Praktische oplossingen die direct resultaat leveren
+            </li>
+          </ul>
 
-          <label for="message">Bericht</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Laat me weten hoe ik u kan helpen..."
-            required
-          ></textarea>
+          <p
+            style="
+              font-size: 15px;
+              font-weight: 700;
+              color: #fef3c7;
+              line-height: 1.5;
+            "
+          >
+            Het resultaat: minder handwerk, meer inzicht, meer tijd.
+          </p>
+        </section>
 
-          <button type="submit">Verstuur bericht</button>
-        </form>
+        <section style="margin-top: 30px">
+          <h2
+            style="
+              font-size: 18px;
+              color: var(--bg-accent);
+              margin-top: 0;
+              margin-bottom: 10px;
+            "
+          >
+            Diensten
+          </h2>
 
-        <div class="success-message" id="successMessage">
-          ✅ Bedankt! Uw bericht is succesvol verzonden.
-        </div>
-        <div class="error-message" id="errorMessage">❌ Er is iets misgegaan.</div>
+          <h3
+            style="
+              font-size: 16px;
+              color: #fef3c7;
+              margin-top: 20px;
+              margin-bottom: 8px;
+            "
+          >
+            Slimmere Google Sheets
+          </h3>
+          <ul
+            style="
+              list-style-type: none;
+              padding-left: 15px;
+              margin-top: 0;
+              margin-bottom: 15px;
+            "
+          >
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Dashboards & KPI-monitoring
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Capaciteitsplanningstools
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Forecasting & planning
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Data-analyse
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Zichzelf bijwerkende Sheets (met automatische formules & structuren)
+            </li>
+          </ul>
+
+          <h3
+            style="
+              font-size: 16px;
+              color: #fef3c7;
+              margin-top: 20px;
+              margin-bottom: 8px;
+            "
+          >
+            Automatisering & Apps Script
+          </h3>
+          <ul
+            style="
+              list-style-type: none;
+              padding-left: 15px;
+              margin-top: 0;
+              margin-bottom: 15px;
+            "
+          >
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Automatische rapportages
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              WebApps op basis van Sheets
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              API-koppelingen
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              E-mailautomatisering
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Processen die volledig handsfree worden uitgevoerd
+            </li>
+          </ul>
+
+          <h3
+            style="
+              font-size: 16px;
+              color: #fef3c7;
+              margin-top: 20px;
+              margin-bottom: 8px;
+            "
+          >
+            Training & Consultancy
+          </h3>
+          <ul
+            style="
+              list-style-type: none;
+              padding-left: 15px;
+              margin-top: 0;
+              margin-bottom: 15px;
+            "
+          >
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Trainingen voor teams
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Optimalisatie van bestaande Sheets
+            </li>
+            <li
+              style="
+                margin-bottom: 5px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Onderhoudsabonnementen
+            </li>
+          </ul>
+        </section>
+
+        <section style="margin-top: 30px">
+          <h2
+            style="
+              font-size: 18px;
+              color: var(--bg-accent);
+              margin-top: 0;
+              margin-bottom: 10px;
+            "
+          >
+            Waarom bedrijven voor ons kiezen
+          </h2>
+          <ul
+            style="
+              list-style-type: none;
+              padding-left: 15px;
+              margin-top: 0;
+              margin-bottom: 0;
+            "
+          >
+            <li
+              style="
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Meetbare tijdsbesparing (vaak 5–20 uur per week)
+            </li>
+            <li
+              style="
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Geen dure software: we bouwen in tools die bedrijven al gebruiken
+            </li>
+            <li
+              style="
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Oplossingen die écht aansluiten op het proces
+            </li>
+            <li
+              style="
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 15px;
+                font-size: 15px;
+              "
+            >
+              <span style="position: absolute; left: 0; color: var(--bg-accent)"
+                >•</span
+              >
+              Snelle oplevering en duidelijke communicatie
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
 
-    <script>
-      const form = document.getElementById("contactForm");
-      const successMessage = document.getElementById("successMessage");
-      const errorMessage = document.getElementById("errorMessage");
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        successMessage.classList.remove("show");
-        errorMessage.classList.remove("show");
-
-        const formData = new FormData(form);
-        const params = new URLSearchParams();
-        for (const [key, value] of formData.entries()) params.append(key, value);
-
-        try {
-          const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbxgazUzBhmNEOAbzqrwWbXCyJsJQy9yEu8s28hZVMD4oBIu2gEtq9crKh7ZkSU7HjI4gQ/exec",
-            { method: "POST", body: params }
-          );
-          const result = await response.json();
-
-          if (result.success) {
-            successMessage.classList.add("show");
-            form.reset();
-            setTimeout(() => successMessage.classList.remove("show"), 4000);
-          } else {
-            // De foutmelding van de script-server wordt al in het Nederlands gegeven, 
-            // dus die hoeven we niet te vertalen, maar de fallback wel.
-            errorMessage.textContent = `❌ ${result.error || "Er is iets misgegaan."}`;
-            errorMessage.classList.add("show");
-            setTimeout(() => errorMessage.classList.remove("show"), 4000);
-          }
-        } catch (err) {
-          errorMessage.textContent = `❌ Er is een netwerkfout opgetreden: ${err.message}`;
-          errorMessage.classList.add("show");
-          setTimeout(() => errorMessage.classList.remove("show"), 4000);
-        }
-      });
-    </script>
-
     <footer>
-      &copy; 2025 Tab Digital. Alle rechten voorbehouden.
+      © 2025 Tab Digital. Alle rechten voorbehouden.
     </footer>
   </body>
 </html>
