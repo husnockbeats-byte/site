@@ -12,190 +12,196 @@
       rel="stylesheet"
     />
 
-        <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Husnock/site/eacab826f55fbb980a22698a1fbbcf9d6073b294/assets/LOGO.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Husnock/site/eacab826f55fbb980a22698a1fbbcf9d6073b294/assets/LOGO.png">
 
 
     <style>
-  :root {
-    --bg-dark: #0f172a;
-    --bg-card: #1e293b;
-    --bg-accent: #f97316;
-    --text-light: #f1f5f9;
-    --text-muted: #94a3b8;
-    --border-color: #334155;
-    --hover-bg: #273549;
-  }
+      :root {
+        --bg-dark: #0f172a;
+        --bg-card: #1e293b;
+        --bg-accent: #f97316;
+        --text-light: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border-color: #334155;
+        --hover-bg: #273549;
+      }
 
-  * { box-sizing: border-box; }
-  body {
-    font-family: "Open Sans", -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-light);
-    margin: 0;
-    line-height: 1.5;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+      * { box-sizing: border-box; }
+      body {
+        font-family: "Open Sans", -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-light);
+        margin: 0;
+        line-height: 1.5;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
-  .wrap {
-    flex: 1;
-    max-width: 820px;
-    margin: 48px auto;
-    padding: 0 16px;
-    position: relative; 
-  }
+      .wrap {
+        flex: 1;
+        max-width: 820px;
+        margin: 48px auto;
+        padding: 0 16px;
+        position: relative; 
+      }
 
-  /* Stijl voor de taalwisselaar aangepast voor tekst */
-  .lang-switch {
-    position: absolute;
-    top: 0; 
-    right: 16px; 
-    padding: 10px 0; /* Padding boven/onder is genoeg */
-    line-height: 1;
-    display: block; /* Zorg voor correcte uitlijning op desktop */
-  }
+      /* Stijl voor de taalwisselaar - nu absoluut binnen de kaart */
+      .lang-switch {
+        position: absolute;
+        top: 10px; /* Binnen de kaartpadding */
+        right: 10px; /* Binnen de kaartpadding */
+        line-height: 1;
+        padding: 0; /* Geen padding nodig op de container */
+      }
 
-  .lang-switch a {
-    text-decoration: none;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.2s;
-    display: inline-block;
-    
-    /* Nieuwe stijlen voor de tekstlink */
-    color: var(--text-muted); /* Gebruik een gedempte kleur */
-    font-weight: 600;
-    font-size: 14px; 
-    padding: 4px 8px; /* Maak het klikgebied groter */
-    border-radius: 6px;
-    border: 1px solid transparent; 
-  }
-  
-  .lang-switch a:hover {
-    opacity: 1;
-    /* Verander de styling bij hover om interactie aan te geven */
-    color: var(--text-light);
-    background: var(--hover-bg);
-    border: 1px solid var(--border-color);
-    transform: none; /* Geen schaling meer nodig */
-  }
+      .lang-switch a {
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+        display: inline-block;
+        
+        /* Nieuwe stijlen voor de tekstlink */
+        color: var(--text-muted); 
+        font-weight: 600;
+        font-size: 14px; 
+        padding: 4px 8px; 
+        border-radius: 6px;
+        border: 1px solid transparent; 
+      }
+      
+      .lang-switch a:hover {
+        opacity: 1;
+        color: var(--text-light);
+        background: var(--hover-bg);
+        border: 1px solid var(--border-color);
+        transform: none; 
+      }
 
-  .card {
-    border: 1px solid var(--border-color);
-    border-radius: 18px;
-    padding: 24px;
-    background: var(--bg-card);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  }
+      .card {
+        border: 1px solid var(--border-color);
+        border-radius: 18px;
+        padding: 24px;
+        background: var(--bg-card);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        position: relative; /* Cruciaal: De kaart is de referentie voor de lang-switch */
+      }
 
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    border-radius: 12px;
-    background: none;
-  }
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        border-radius: 12px;
+        background: none;
+        /* Voeg marge toe om botsing met de vlag te voorkomen */
+        margin-top: 20px; 
+      }
+      
+      /* Aanpassing voor de logo container op mobiel om ruimte te maken voor de vlag */
+      @media (max-width: 640px) {
+        .logo-container {
+           margin-top: 15px;
+        }
+      }
 
-  .logo-container img {
-    max-height: 90px;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
 
-  .logo-container img:hover { transform: scale(1.05); }
+      .logo-container img {
+        max-height: 90px;
+        width: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
 
-  .muted {
-    color: var(--text-muted);
-    font-size: 14px;
-    text-align: center;
-    margin: 8px 0 16px;
-  }
+      .logo-container img:hover { transform: scale(1.05); }
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 8px;
-  }
+      .muted {
+        color: var(--text-muted);
+        font-size: 14px;
+        text-align: center;
+        margin: 8px 0 16px;
+      }
 
-  @media (max-width: 640px) {
-    .grid { grid-template-columns: 1fr; }
-    .logo-container img { max-height: 70px; }
-    
-    /* De Oplossing voor de Taalwisselaar */
-    .lang-switch { 
-      position: static; 
-      text-align: right;
-      padding-bottom: 0;
-      margin-right: -16px; 
-      margin-bottom: 10px; 
-      line-height: normal;
-    }
-    
-    .wrap {
-      margin-top: 20px;
-    }
-  }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 8px;
+      }
 
-  .cta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 18px;
-    border: 1px solid var(--border-color);
-    border-radius: 14px;
-    background: var(--hover-bg);
-    text-decoration: none;
-    color: var(--text-light);
-    transition: all 0.25s ease;
-  }
+      @media (max-width: 640px) {
+        .grid { grid-template-columns: 1fr; }
+        .logo-container img { max-height: 70px; }
+        
+        /* De Taalwisselaar blijft absoluut gepositioneerd t.o.v. de kaart */
+        .lang-switch { 
+          position: absolute; 
+          top: 10px; 
+          right: 10px; 
+        }
+        
+        .wrap {
+          margin: 48px auto; /* Herstel de desktopmarge */
+        }
+      }
 
-  .cta:hover {
-    background: #3a3a3a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(249,115,22,0.25);
-  }
+      .cta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        background: var(--hover-bg);
+        text-decoration: none;
+        color: var(--text-light);
+        transition: all 0.25s ease;
+      }
 
-  .cta h2 { margin: 0; font-size: 16px; color: #fef3c7; }
-  .cta p { margin: 4px 0 0; color: var(--text-muted); font-size: 13px; }
+      .cta:hover {
+        background: #3a3a3a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(249,115,22,0.25);
+      }
 
-  .go {
-    margin-left: auto;
-    font-weight: 700;
-    background: rgba(249,115,22,0.15);
-    color: #fdba74;
-    border: 1px solid rgba(253,186,116,0.4);
-    border-radius: 10px;
-    padding: 8px 10px;
-    white-space: nowrap;
-  }
+      .cta h2 { margin: 0; font-size: 16px; color: #fef3c7; }
+      .cta p { margin: 4px 0 0; color: var(--text-muted); font-size: 13px; }
 
-  footer {
-    background: #111;
-    color: #999;
-    text-align: center;
-    padding: 25px 0;
-    font-size: 14px;
-    margin-top: 40px;
-    border-top: 1px solid #1e293b;
-  }
-  footer a { color: var(--bg-accent); text-decoration: none; margin: 0 12px; font-weight: 500;}
-  footer a:hover { text-decoration: underline; }
-</style>
+      .go {
+        margin-left: auto;
+        font-weight: 700;
+        background: rgba(249,115,22,0.15);
+        color: #fdba74;
+        border: 1px solid rgba(253,186,116,0.4);
+        border-radius: 10px;
+        padding: 8px 10px;
+        white-space: nowrap;
+      }
+
+      footer {
+        background: #111;
+        color: #999;
+        text-align: center;
+        padding: 25px 0;
+        font-size: 14px;
+        margin-top: 40px;
+        border-top: 1px solid #1e293b;
+      }
+      footer a { color: var(--bg-accent); text-decoration: none; margin: 0 12px; font-weight: 500;}
+      footer a:hover { text-decoration: underline; }
+    </style>
   </head>
 
   <body>
     <div class="wrap">
-      <div class="lang-switch">
-        <a href="../EN/index.html" title="Switch to English" aria-label="Switch to English">
-          🇬🇧
-        </a>
-      </div>
       <div class="card">
+        <div class="lang-switch">
+          <a href="../EN/index.html" title="Switch to English" aria-label="Switch to English">
+            🇬🇧
+          </a>
+        </div>
         <div class="logo-container" aria-hidden="true">
           <img src="https://raw.githubusercontent.com/Husnock/site/eacab826f55fbb980a22698a1fbbcf9d6073b294/assets/TabDigital_full_logo.png" alt="Tab Digital logo" />
         </div>
